@@ -6,19 +6,8 @@
 /// Ressurs: https://www.w3schools.com/php/php_echo_print.asp
 // Echo string:
 
-///kort datatyper
-$name = "Isak"; // string
-$karakter = 6; // integer
-$numbers = [1, 2, 3]; // array
-$user = ["username" => "isak"]; // associative array
-$auth = new AuthService; // object
-//AuthService klassen finnes ikke så ignorer hvis LSP klager
-
-
-// \n er for new-line
-echo "<p>Hello World!</p>";
+echo "<p>Hello World!</p><br>";
 // OUTPUT: Hello World!
-
 
 
 // Echo Int & String Concatenation
@@ -37,6 +26,7 @@ $number = 61;
 // echo variabel
 echo"<p>$sentance $number</p>";
 // OUTPUT: Hellsike, denne variabelen var jo dritkul! 61
+
 
 
 
@@ -69,17 +59,24 @@ $users = [
     
     [
         "username" => "Kontard",
-        "password" => "6767"
+        "password" => "6767",
+        "age" => 17
     ]
 ];
 
 
-// var_dump() printer detaljert informasjon om en variabel (type + verdi)
-var_dump($users[0]);
-// OUTPUT: ["username"] => string(4)"Isak" ["password"] => string(9)"some_pass" ["age"] => int(17)
+// print_r printer formatert informasjon om en variabel (type + verdi)
+print_r($users[0]);
+/* OUTPUT: Array
+(
+    [username] => Isak
+    [password] => some_pass
+    [age] => 17
+)
+*/
 
-var_dump($users[1]['username']);
-// OUTPUT: string(7)"Kontard"
+print_r($users[1]['username']);
+// OUTPUT: Kontard
 
 ///// Loops
 // Ressurs: https://www.w3schools.com/php/php_looping.asp
