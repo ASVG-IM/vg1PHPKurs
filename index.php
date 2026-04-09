@@ -5,70 +5,96 @@
 ///// Printe ut ting til nettsiden
 /// Ressurs: https://www.w3schools.com/php/php_echo_print.asp
 // Echo string:
+
+
+
 // \n er for new-line
-echo "Hei hei, jeg heter Isak Brun.\n"; 
+echo "<p>Hei hei, jeg heter Isak Brun.</p>";
 // OUTPUT: Hei hei, jeg heter Isak Brun.
+
+
 
 // Echo Int & String Concatenation
 /// Ressurs: https://www.w3schools.com/php/php_string_concatenate.asp
-echo 123 . "\n"; 
+echo "Mitt gøye tall er: " . 123 . "<br>"; 
 //OUTPUT: 123
 
-// Echo variabel verdi 
-$num = "print meg!" . "\n";
-echo $num;
-// OUTPUT: 123
 
 
-/////Variabel
+//Variabel
 /// Ressurs: https://www.w3schools.com/php/php_variables.asp
 // Lage variabel
-$kulVariabel = "Hellsike, denne variabelen var jo dritkul!";
-$heiVg1Elever = "67";
+$sentance = "Hellsike, denne variabelen var jo dritkul!";
+$number = 61;
+
+
+// echo variabel
+echo"<p>$sentance $number</p>";
+// OUTPUT: Hellsike, denne variabelen var jo dritkul!61
+
+
 
 ///// If og else statements
 /// Ressurs: https://www.w3schools.com/php/php_if_else.asp
-if($heiVg1Elever == 67){
-    echo "Hei elever på Vg1!\n";
+if($number === 61){
+    echo "Jeg er 61!<br>";
 } 
 else {
-    echo "Ha det... :(\n";
+    echo "Jeg er IKKE 61 :(<br>";
 }
 
 // Arrays
-// Int array
-$intArr = [1, 2, 4];
+// Array med ints
+$numbers = [21, 67, 61];
 
-// String array
-$strArr = ["Øyvind", "Bent", "Hilde", "Halfdann"]; //Kulleste lærerene
+// Array med strings
+$teachers = ["Øyvind", "Bent", "Hilde", "Halfdann"]; //Kulleste lærerene
+
+// Array med ulike datatyper (string, int, array)
+$mixed = ["jeg er string", 5, $teachers];
 
 // Associative array
-$assocArr = [
-    "fornavn" => "Øyvind",
-    "etternavn" => "Solberg",
-    "alder" => 53,
-    "favoritt_tall" => $intArr,
-    "kurs_karakterer" => [
-        "6" => ["Isak", "Viggo", "Konrad"],
-        "5" => NULL,
-        "4" => NULL,
-        "3" => NULL,
-        "2" => NULL,
-        "1" => "Alle andre",
+$users = [
+    [
+        "username" => "Isak",
+        "password" => "some_pass",
+        "age" => 17
     ],
+    
+    [
+        "username" => "Kontard",
+        "password" => "6767"
+    ]
 ];
 
-var_dump($assocArr['kurs_karakterer']['1']);
+
+// var_dump() printer detaljert informasjon om en variabel (type + verdi)
+var_dump($users[0]);
+// OUTPUT: ["username"] => string(4)"Isak" ["password"] => string(9)"some_pass" ["age"] => int(17)
+
+var_dump($users[1]['username']);
+// OUTPUT: string(7)"Kontard"
 
 ///// Loops
 // Ressurs: https://www.w3schools.com/php/php_looping.asp
 // For loops
-for($i = 69; $i < 69; $i++){
-    echo "Hei!";
+for($i = 0; $i < 5; $i++){
+    echo "i er: $i <br>";
 }
 
-// foreach
-foreach($strArr as $name){
-    echo $name . "\n";
+
+// while loop
+$int = 0;
+while($int < 100){
+    $int++;
 }
+echo $int;
+// OUTPUT: 100
+
+
+// foreach
+foreach($users as $user){
+    echo "Brukernavn: " . $user['username'] . "<br>";
+}
+
 
