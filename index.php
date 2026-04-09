@@ -17,15 +17,14 @@ $auth = new AuthService; // object
 
 // \n er for new-line
 echo "<p>Hello World!</p>";
-// OUTPUT: Hei hei, jeg heter Isak Brun.
+// OUTPUT: Hello World!
 
 
 
 // Echo Int & String Concatenation
 /// Ressurs: https://www.w3schools.com/php/php_string_concatenate.asp
 echo "Mitt gøye tall er: " . 123 . "<br>"; 
-//OUTPUT: 123
-
+// OUTPUT: Mitt gøye taller: 123
 
 
 //Variabel
@@ -37,7 +36,7 @@ $number = 61;
 
 // echo variabel
 echo"<p>$sentance $number</p>";
-// OUTPUT: Hellsike, denne variabelen var jo dritkul!61
+// OUTPUT: Hellsike, denne variabelen var jo dritkul! 61
 
 
 
@@ -88,7 +87,7 @@ var_dump($users[1]['username']);
 for($i = 0; $i < 5; $i++){
     echo "i er: $i <br>";
 }
-
+// OUTPUT: i er i-verdi
 
 // while loop
 $int = 0;
