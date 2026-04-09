@@ -16,7 +16,7 @@ $auth = new AuthService; // object
 
 
 // \n er for new-line
-echo "<p>Hei hei, jeg heter Isak Brun.</p>";
+echo "<p>Hello World!</p>";
 // OUTPUT: Hei hei, jeg heter Isak Brun.
 
 
