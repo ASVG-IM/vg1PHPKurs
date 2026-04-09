@@ -1,8 +1,4 @@
 <?php
-echo "Hello World";
-?>
-
-<?php
 // Sjekker hvilken metode som ble brukt for å sende data til siden
 // "POST" brukes vanligvis når vi sender data fra et skjema
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
