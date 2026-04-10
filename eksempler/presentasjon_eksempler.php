@@ -18,8 +18,8 @@ echo $user["name"];
 // OUTPUT: Isak
 
 //stmts som trenger parametre
-$stmt = $conn->prepare('SELECT * FROM users WHERE id = ?;'); 
-$stmt->bind_param("i", $userId); // plasserer ? verdier, $userId er integer derfor "i"
+$stmt = $conn->prepare('SELECT * FROM users WHERE id = ?;'); // forbereder statement
+$stmt->bind_param("i", $userId); // plasserer ? verdier. $userId er integer derfor "i"
 $stmt->execute(); // kjører stmt, returnerer true eller false
 $result = $stmt->get_result(); // $result har nå stmt resultatet
 $data = $result->fetch_assoc(); // henter mysqli_result som et associative array
